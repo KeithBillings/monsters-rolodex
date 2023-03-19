@@ -12,6 +12,7 @@ class App extends Component {
         firstName: 'Keith',
         lastName: 'Billings',
       },
+      company: 'Brandlive',
     };
   }
 
@@ -23,7 +24,15 @@ class App extends Component {
           <p>
             My name is {this.state.name.firstName} {this.state.name.lastName}
           </p>
-          <button onClick={() => {}}>Change Name</button>
+          <button
+            onClick={() => {
+              this.setState({
+                name: { firstName: 'Mochi' },
+              });
+            }}
+          >
+            Change Name
+          </button>
         </header>
       </div>
     );
